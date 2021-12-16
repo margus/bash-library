@@ -20,7 +20,9 @@ SCRIPT_FOLDER="$(dirname "${SCRIPT_NAME}")"
 
 export MESSAGE_LOG_FILE="${LOG_DIR}/${SCRIPT_NAME}.log"
 
-CERTBOT_LIVE_DIR='/etc/letsencrypt/live'
+if [[ -z "${CERTBOT_LIVE_DIR}" ]]; then
+  CERTBOT_LIVE_DIR='/etc/letsencrypt/live'
+fi
 
 if [[ -z "${HAPROXY_CERTS_DIR}" ]]; then
   HAPROXY_CERTS_DIR='/etc/haproxy/certs'
