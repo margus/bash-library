@@ -3,6 +3,8 @@
 # Generic bash script helpers
 #
 
+. /etc/environment
+
 COLOR_RED="$(tput -Txterm setaf 1)"
 COLOR_GREEN="$(tput -Txterm setaf 2)"
 COLOR_YELLOW="$(tput -Txterm setaf 3)"
